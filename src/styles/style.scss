@@ -1,3 +1,6 @@
+@import 'variables';
+@import '_mixes';
+
 body, h3, span{  
   margin: 0;
   padding: 0;
@@ -5,6 +8,8 @@ body, h3, span{
 
 body{
   font-family: 'Poppins', sans-serif;
+
+  background: $veryLightGray;
 }
 
 .content{
@@ -26,6 +31,24 @@ body{
 
   padding-left: 2rem;
   padding-right: 2rem;
+
+  color: $veryDarkBlue;
+
+  .lema{
+    font-weight: 100;
+    font-size: xx-large;
+  }
+
+  .offer{
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  .description{    
+    color: $grayishBlue;
+    max-width: 540px;
+    text-align: center;    
+  }
 }
 
 .cards{
@@ -34,26 +57,56 @@ body{
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
 
+  margin: 2rem;
+
+  position: relative;
+
   .item-1{
     grid-row-start: 2;
     grid-row-end: 4;
+
+    @include boxes();    
   }  
 
   .item-2{
     grid-row-start: 1;
     grid-row-end: 3;
+
+    @include boxes();
+
+    &::after{
+      position: absolute;
+      background: red;
+      content: '';
+      height: 5px;
+      top: 0;
+      width: 300px;
+      border-top-left-radius: 5px;
+    }
+  
   }
 
   .item-3{
     grid-row-start: 3;
     grid-row-end: 5;
+
+    @include boxes();    
   }
 
   .item-4{
     grid-row-start: 2;
     grid-row-end: 4;
+
+    @include boxes();    
   }
   
+  .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    margin-top: 1rem;
+  }
   
 }
 

@@ -1,0 +1,23 @@
+@mixin boxes{
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: -4px 7px 13px 0px rgba(217,226,237,1);
+
+  max-width: 250px;
+
+  margin: .5rem;
+  padding: 2rem;
+  background: white;
+  h3{
+    padding-bottom: .7rem;
+    color: $veryDarkBlue;
+  }
+
+  span{
+    color: $grayishBlue;
+
+    min-width: 224px;
+    font-size: small;
+  }
+
+}
