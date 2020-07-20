@@ -1,11 +1,13 @@
-@mixin boxes{
+@mixin boxes($borderColor){
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: -4px 7px 13px 0px rgba(217,226,237,1);
 
+  border-top: 5px solid $borderColor;  
+
   max-width: 250px;
 
-  margin: .5rem;
+  margin: 1rem;
   padding: 2rem;
   background: white;
   h3{

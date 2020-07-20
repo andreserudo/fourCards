@@ -1,5 +1,6 @@
 @import 'variables';
 @import '_mixes';
+@import '_mediaQueries';
 
 body, h3, span{  
   margin: 0;
@@ -22,7 +23,7 @@ body{
 }
 
 .header{
-  height: 40vh;
+  height: 25vh;
 
   display: flex;
   flex-direction: column;
@@ -34,14 +35,29 @@ body{
 
   color: $veryDarkBlue;
 
+  @include responsive(tablet){
+    margin-top: 3rem;
+  }
+
   .lema{
     font-weight: 100;
     font-size: xx-large;
+
+    @include responsive(tablet){
+      font-size: x-large;
+      text-align: center;  
+    }
   }
 
   .offer{
     font-weight: 600;
-    font-size: xx-large;
+    font-size: xxx-large;
+
+    @include responsive(tablet){
+      font-size: xx-large;
+      text-align: center;  
+    }
+
   }
 
   .description{    
@@ -54,34 +70,61 @@ body{
 .cards{
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  @include responsive(mobile){
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;  
+  }
+
+  @include responsive(tablet){
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;  
+  }
 
   margin: 2rem;
 
   position: relative;
 
+
+
   .item-1{
     grid-row-start: 2;
     grid-row-end: 4;
 
-    @include boxes();    
+    @include boxes($cyan);          
+
+    @include responsive(mobile){
+      grid-row-start: 1;
+      grid-row-end: 2;        
+      
+      max-height: 220px;
+    }
+
+    @include responsive(tablet){
+      grid-row-start: 1;
+      grid-row-end: 2;        
+    }
+    
   }  
 
   .item-2{
     grid-row-start: 1;
     grid-row-end: 3;
 
-    @include boxes();
+    @include boxes($red);
 
-    &::after{
-      position: absolute;
-      background: red;
-      content: '';
-      height: 5px;
-      top: 0;
-      width: 300px;
-      border-top-left-radius: 5px;
+    @include responsive(mobile){
+      grid-row-start: 2;
+      grid-row-end: 3;        
+
+      max-height: 220px;      
+    }
+
+    @include responsive(tablet){
+      grid-row-start: 2;
+      grid-row-end: 3;        
     }
   
   }
@@ -90,22 +133,48 @@ body{
     grid-row-start: 3;
     grid-row-end: 5;
 
-    @include boxes();    
+    @include boxes($orange);    
+
+    @include responsive(mobile){
+      grid-row-start: 3;
+      grid-row-end: 4;        
+
+      max-height: 220px;
+    }
+
+    @include responsive(tablet){
+      grid-row-start: 3;
+      grid-row-end: 4;        
+    }
+
   }
 
   .item-4{
     grid-row-start: 2;
     grid-row-end: 4;
 
-    @include boxes();    
-  }
+    @include boxes($blue);    
+
+    @include responsive(mobile){
+      grid-row-start: 4;
+      grid-row-end: 5;        
+
+      max-height: 220px;
+    }
+
+    @include responsive(tablet){
+      grid-row-start: 4;
+      grid-row-end: 5;        
+    }
+
+  } 
   
   .logo{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
 }
