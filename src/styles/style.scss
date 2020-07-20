@@ -106,6 +106,8 @@ body{
       grid-row-start: 1;
       grid-row-end: 2;        
     }
+
+    animation: fadeContent 1s ease-in-out forwards;
     
   }  
 
@@ -126,6 +128,8 @@ body{
       grid-row-start: 2;
       grid-row-end: 3;        
     }
+
+    animation: fadeContent 2s ease-in-out forwards;    
   
   }
 
@@ -147,6 +151,8 @@ body{
       grid-row-end: 4;        
     }
 
+    animation: fadeContent 4s ease-in-out forwards;    
+
   }
 
   .item-4{
@@ -167,6 +173,8 @@ body{
       grid-row-end: 5;        
     }
 
+    animation: fadeContent 3s ease-in-out forwards;
+
   } 
   
   .logo{
@@ -179,4 +187,12 @@ body{
   
 }
 
+@keyframes fadeContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 

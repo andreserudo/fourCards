@@ -120,6 +120,8 @@ body {
   margin: 1rem;
   padding: 2rem;
   background: white;
+  -webkit-animation: fadeContent 1s ease-in-out forwards;
+          animation: fadeContent 1s ease-in-out forwards;
 }
 
 .cards .item-1 h3 {
@@ -163,6 +165,8 @@ body {
   margin: 1rem;
   padding: 2rem;
   background: white;
+  -webkit-animation: fadeContent 2s ease-in-out forwards;
+          animation: fadeContent 2s ease-in-out forwards;
 }
 
 .cards .item-2 h3 {
@@ -206,6 +210,8 @@ body {
   margin: 1rem;
   padding: 2rem;
   background: white;
+  -webkit-animation: fadeContent 4s ease-in-out forwards;
+          animation: fadeContent 4s ease-in-out forwards;
 }
 
 .cards .item-3 h3 {
@@ -249,6 +255,8 @@ body {
   margin: 1rem;
   padding: 2rem;
   background: white;
+  -webkit-animation: fadeContent 3s ease-in-out forwards;
+          animation: fadeContent 3s ease-in-out forwards;
 }
 
 .cards .item-4 h3 {
@@ -291,5 +299,23 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: 2rem;
+}
+
+@-webkit-keyframes fadeContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
